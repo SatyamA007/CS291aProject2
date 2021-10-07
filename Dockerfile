@@ -9,4 +9,5 @@ RUN gem install bundler && \
     bundle install
 
 COPY app.rb config.ru puma.rb ./
+COPY test.txt ./
 CMD exec bundle exec puma -C puma.rb
